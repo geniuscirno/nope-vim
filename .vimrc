@@ -49,7 +49,6 @@
     set number                          " Line numbers on
     set showmatch                       " Show matching brackets/parenthesis
     set hlsearch                        " Highlight search terms
-    set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
     set cursorline
     hi CursorLine   cterm=NONE ctermbg=24 ctermfg=white
 " }
@@ -106,6 +105,26 @@
    " }
    " NERDTree {
         autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+   " }
+   " NERDCommenter {
+        " Add spaces after comment delimiters by default
+        let g:NERDSpaceDelims = 1
+        " Use compact syntax for prettified multi-line comments
+        let g:NERDCompactSexyComs = 1
+        " Align line-wise comment delimiters flush left instead of following code indentation
+        let g:NERDDefaultAlign = 'left'
+        " Add your own custom formats or override the defaults
+        let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+        " Allow commenting and inverting empty lines (useful when commenting a region)
+        let g:NERDCommentEmptyLines = 1
+        " Enable trimming of trailing whitespace when uncommenting
+        let g:NERDTrimTrailingWhitespace = 1
+        " Enable NERDCommenterToggle to check all selected lines is commented or not 
+        let g:NERDToggleCheckAllLines = 1
+   " }
+   " vim-airline {
+        " Automatically displays all buffers when there's only one tab open.
+        let g:airline#extensions#tabline#enabled = 1
    " }
 " }
 
