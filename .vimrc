@@ -4,6 +4,7 @@
 
 " Basics {
     set nocompatible
+    set encoding=utf-8
 " }
 
 " General {
@@ -49,6 +50,18 @@
     set hlsearch                        " Highlight search terms
     set cursorline
     hi CursorLine   cterm=NONE ctermbg=24 ctermfg=white
+    if has('win32')
+        set guioptions-=m  "remove menu bar
+        set guioptions-=T  "remove toolbar
+        set guioptions-=r  "remove right-hand scroll bar
+        set guioptions-=L  "remove left-hand scroll bar
+    end
+" }
+
+" Font {
+    if has('win32')
+        set guifont=Monaco\ for\ Powerline:h12:cANSI
+    endif
 " }
 
 " Formatting {
@@ -78,6 +91,7 @@
     nnoremap <C-F>o :CtrlSFOpen<CR>
     nnoremap <C-F>t :CtrlSFToggle<CR>
     inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+    let g:ctrlsf_ackprg='ag'
 " }
 
 " Plugins {
