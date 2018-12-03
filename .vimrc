@@ -39,8 +39,23 @@
     set hidden                          " Allow buffer switching without saving
 " }
 
+" Font {
+    if has("win32") || has("win64")
+        set guifont=Monaco\ for\ Powerline:h14:cANSI
+        set renderoptions=type:directx,renmode:5
+    endif
+" }
+
 
 " UI {
+    if has("gui_running")
+        set guioptions-=m " 隐藏菜单栏
+        set guioptions-=T " 隐藏工具栏
+        set guioptions-=L " 隐藏左侧滚动条
+        set guioptions-=r " 隐藏右侧滚动条
+        set guioptions-=b " 隐藏底部滚动条
+        set showtabline=0 " 隐藏Tab栏
+    endif
     let g:rehash256=1
     let g:molokai_original = 1
     colorscheme molokai
