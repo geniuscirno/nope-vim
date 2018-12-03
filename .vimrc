@@ -4,6 +4,8 @@
 
 " Basics {
     set nocompatible
+    set encoding=utf-8
+    set fileencoding=utf-8
 " }
 
 " General {
@@ -41,7 +43,7 @@
 
 " Font {
     if has("win32") || has("win64")
-        set guifont=Monaco\ for\ Powerline:h14:cANSI
+        set guifont=Monaco\ for\ Powerline:h12:cANSI
         set renderoptions=type:directx,renmode:5
     endif
 " }
@@ -74,6 +76,13 @@
     set splitright                  " Puts new vsplit windows to the right of the current
     set splitbelow                  " Puts new split windows to the bottom of the current
 " }
+
+" Terminal {
+    if has("win32") || has("win64")
+        set shell=powershell.exe
+    endif
+" }
+
 
 " Key Mapping {
     " NERDTree
