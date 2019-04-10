@@ -10,6 +10,7 @@
 
 " General {
     set background=dark
+    set t_Co=256
     function! ToggleBG()
         let s:tbg= &background
         if s:tbg == "dark"

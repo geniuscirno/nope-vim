@@ -19,3 +19,6 @@
 [submodule "pack/plugins/start/molokai"]
 	path = pack/plugins/start/molokai
 	url = https://github.com/tomasr/molokai.git
+[submodule "pack/plugins/start/matchit.zip"]
+	path = pack/plugins/start/matchit.zip
+	url = https://github.com/vim-scripts/matchit.zip.git
