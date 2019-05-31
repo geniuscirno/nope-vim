@@ -20,6 +20,10 @@
         else                    " On mac and Windows, use * register for copy-paste
             set clipboard=unnamed
         endif
+        noremap <Leader>y "*y
+        noremap <Leader>p "*p
+        noremap <Leader>Y "+y
+        noremap <Leader>P "+p
     endif
 
     "set autowrite                       " Automatically write a file when leaving a modified buffer
@@ -46,8 +50,8 @@
         let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
         set termguicolors
     endif
-    let g:rehash256=1
-    let g:molokai_original = 1
+    "let g:rehash256=1
+    "let g:molokai_original = 1
     colorscheme molokai
 "}
 
